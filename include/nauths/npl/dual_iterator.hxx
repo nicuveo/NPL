@@ -29,14 +29,14 @@ namespace npl
   template <typename C>
   template <typename I>
   DualIterator<C>::DualIterator(I const& other)
-    : AdaptorType(other), b_(other.b_), e_(other.e_)
+    : Adaptor(other), b_(other.b_), e_(other.e_)
   {
   }
 
   template <typename C>
   template <typename I>
   DualIterator<C>::DualIterator(I const& b, I const& e, I const& i)
-    : AdaptorType(i), b_(b), e_(e)
+    : Adaptor(i), b_(b), e_(e)
   {
   }
 
@@ -47,8 +47,8 @@ namespace npl
   inline typename DualIterator<C>::Dual
   DualIterator<C>::dereference() const
   {
-    IteratorType i1 = this->base_reference();
-    IteratorType i2 = i1;
+    Iterator i1 = this->base_reference();
+    Iterator i2 = i1;
 
     if (++i2 == e_)
       i2 = b_;

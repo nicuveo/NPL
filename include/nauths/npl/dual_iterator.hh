@@ -101,8 +101,8 @@ namespace npl
 
       // data
 
-      IteratorType b_;
-      IteratorType e_;
+      Iterator b_;
+      Iterator e_;
   };
 
 
