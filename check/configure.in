@@ -1,0 +1,10 @@
+## configure.in
+## Made by nicuveo for mcl
+
+ANALYSE_OPTS = -o "-I ../include"
+COVERAGE_OPTS = -t npl -o "--no-branch-coverage"
+COVERAGE_OUT = ../doc/coverage
+
+TESTS =
+
+CFIL = $(shell ../scripts/src | sed 's%^%../%')
