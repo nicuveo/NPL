@@ -60,21 +60,21 @@ namespace npl
   // helpers
 
   template <typename C>
-  inline DualIterator<C> begin(C const& c)
+  inline DualIterator<C> dual_begin(C const& c)
   {
     return DualIterator<C>(c.begin(), c.end(), c.begin());
   }
 
   template <typename C>
-  inline DualIterator<C> end(C const& c)
+  inline DualIterator<C> dual_end(C const& c)
   {
     return DualIterator<C>(c.begin(), c.end(), c.end());
   }
 
   template <typename C>
-  inline Range< DualIterator<C> > range(C const& c)
+  inline Range< DualIterator<C> > dual_range(C const& c)
   {
-    return std::make_pair(begin(c), end(c));
+    return std::make_pair(dual_begin(c), dual_end(c));
   }
 
 

@@ -118,9 +118,9 @@ namespace npl
 
   // helpers
 
-  template <typename C> DualIterator<C>          begin(C const& c);
-  template <typename C> DualIterator<C>          end  (C const& c);
-  template <typename C> Range< DualIterator<C> > range(C const& c);
+  template <typename C> DualIterator<C>          dual_begin(C const& c);
+  template <typename C> DualIterator<C>          dual_end  (C const& c);
+  template <typename C> Range< DualIterator<C> > dual_range(C const& c);
 
 
   template <typename T1, typename T2>
