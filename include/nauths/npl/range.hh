@@ -38,25 +38,25 @@ namespace npl
   template <typename C>
   Range<typename C::const_iterator> range(C const& c)
   {
-    return Range(c.begin(), c.end());
+    return Range<typename C::const_iterator>(c.begin(), c.end());
   }
 
   template <typename C>
   Range<typename C::iterator> range(C& c)
   {
-    return Range(c.begin(), c.end());
+    return Range<typename C::iterator>(c.begin(), c.end());
   }
 
   template <typename C>
   Range<typename C::const_reverse_iterator> rrange(C const& c)
   {
-    return Range(c.rbegin(), c.rend());
+    return Range<typename C::const_reverse_iterator>(c.rbegin(), c.rend());
   }
 
   template <typename C>
   Range<typename C::reverse_iterator> rrange(C& c)
   {
-    return Range(c.rbegin(), c.rend());
+    return Range<typename C::reverse_iterator>(c.rbegin(), c.rend());
   }
 
 }
