@@ -15,8 +15,8 @@
 //HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 // Includes
 
+# include <tuple>
 # include <boost/iterator/iterator_adaptor.hpp>
-# include <boost/tuple/tuple.hpp>
 # include <boost/call_traits.hpp>
 # include "nauths/npl/range.hh"
 
@@ -41,7 +41,7 @@ namespace npl
         typedef typename Container::value_type                 Value;
         typedef typename Container::const_iterator             Iterator;
         typedef typename boost::call_traits<Value>::param_type Ref;
-        typedef boost::tuple<Ref, Ref>                         Dual;
+        typedef std::tuple<Ref, Ref>                           Dual;
     };
 
     template <typename E, typename C>
@@ -124,9 +124,9 @@ namespace npl
 
 
   template <typename T1, typename T2>
-  typename boost::call_traits<T1>::const_reference first (boost::tuple<T1, T2> const& dt);
+  typename boost::call_traits<T1>::const_reference first (std::tuple<T1, T2> const& dt);
   template <typename T1, typename T2>
-  typename boost::call_traits<T2>::const_reference second(boost::tuple<T1, T2> const& dt);
+  typename boost::call_traits<T2>::const_reference second(std::tuple<T1, T2> const& dt);
 
 }
 

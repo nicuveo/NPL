@@ -53,7 +53,7 @@ namespace npl
     if (++i2 == e_)
       i2 = b_;
 
-    return boost::tie(*i1, *i2);
+    return std::tie(*i1, *i2);
   }
 
 
@@ -80,16 +80,16 @@ namespace npl
 
   template <typename T1, typename T2>
   inline typename boost::call_traits<T1>::const_reference
-  first(boost::tuple<T1, T2> const& dt)
+  first(std::tuple<T1, T2> const& dt)
   {
-    return dt.template get<0>();
+    return std::get<0>(dt);
   }
 
   template <typename T1, typename T2>
   inline typename boost::call_traits<T2>::const_reference
-  second(boost::tuple<T1, T2> const& dt)
+  second(std::tuple<T1, T2> const& dt)
   {
-    return dt.template get<1>();
+    return std::get<1>(dt);
   }
 
 
